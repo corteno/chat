@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: NotoSansRegular;
+}
+
+
+.header{
+    display: flex;
+    justify-content: center;
+}
+
+.header-title{
+    font-family: NotoSansBold;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.login-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 20px;
+}
+
+.login-wrapper form{
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-wrapper input{
+    margin-bottom: 10px;
+}
+
+#chat-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#chat-data{
+    min-height: 400px;
+    max-height: 400px;
+    overflow: scroll;
+    overflow-x: hidden;
+    max-width: 500px;
+    width: 100%;
+}
+
+.message{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    margin: 10px 0;
+
+}
+
+.message-self{
+    text-align: right;
+    margin-left: auto;
+}
+
+.message-other{
+    text-align: left;
+}
+
+.message-user{
+    font-family: NotoSansBold;
+}
+
+.message-time{
+    font-size: 12px;
+    color: #b8b8b8;
+}
+
+.input-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+
+.submit-button{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+
+    margin-top: 10px;
+    padding: 5px 15px;
+
+    background: transparent;
+    border: 1px solid #000;
+
+    cursor: pointer;
+    /*max-width: 200px;
+    width: 100%;*/
+
+
+}
+
+
+
+
+/*
+    FONTS
+*/
+
+@font-face {
+    font-family: NotoSansRegular;
+    src: url("fonts/NotoSansUI-Regular.ttf");
+}
+
+@font-face {
+    font-family: NotoSansBold;
+    src: url("fonts/NotoSansUI-Bold.ttf");
+}
