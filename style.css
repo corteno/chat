@@ -5,9 +5,22 @@
 }
 
 
-.header{
+.header-wrapper{
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+
+.chat-header{
+    justify-content: flex-start;
+}
+
+.user{
+    display: flex;
+    align-self: flex-start;
+    align-self: center;
+    padding-left: 20px;
 }
 
 .header-title{
@@ -44,7 +57,7 @@
 
 #chat-data{
     min-height: 400px;
-    max-height: 400px;
+    max-height: 80vh;
     overflow: scroll;
     overflow-x: hidden;
     max-width: 500px;

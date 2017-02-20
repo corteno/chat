@@ -17,10 +17,10 @@ include("functions.php");
 	<title>Chat</title>
 	<link rel="stylesheet" href="style.css">
 
+	<script src="js/scroll.js"></script>
 	<!-- AJAX SCRIPT -->
 	<script>
 		function ajax() {
-
 			var request = new XMLHttpRequest();
 
 			request.onreadystatechange = function () {
@@ -31,17 +31,18 @@ include("functions.php");
 
 			request.open('GET','chat-logic.php',true);
 			request.send();
-
 		}
 
-		setInterval(function(){ajax()}, 1000);
+		setInterval(function(){
+			ajax();
+		}, 1000);
 	</script>
 
 </head>
 <body onload="ajax();">
-<div class="header-wrapper">
+<div class="header-wrapper chat-header">
 	<div class="user">
-		<?php echo $_SESSION['displayname']; ?>
+		<?php printf($_SESSION['displayname']); ?>
 	</div>
 </div>
 
@@ -50,19 +51,27 @@ include("functions.php");
 		<div id="chat-data">
 
 		</div>
-		<form class="input-form" method="post" action="chat.php">
+		<form class="input-form" method="post" action="">
 			<textarea id="message-input" type="text" name="message" placeholder="Enter message"></textarea>
 			<input class="submit-button" type="submit" name="submit" value="Send">
 		</form>
+
 		<?php
-		if(isset($_POST['submit'])){
+
+		if(isset($_POST['submit']) && ($_POST['submit'] == "Send")){
 
 			$displayname = $_SESSION['displayname'];
 			$message = $_POST['message'];
 
-			$query = "INSERT INTO `chat`.`chat` (`id`, `name`, `message`, `date`) VALUES (NULL, '$displayname', '$message', CURRENT_TIMESTAMP)";
-			$insert = $conn->query($query);
-			header("Location: ");
+
+				$query = "INSERT INTO `chat`.`chat` (`id`, `name`, `message`, `date`) VALUES (NULL, '$displayname', '$message', CURRENT_TIMESTAMP)";
+				$insert = $conn->query($query);
+
+
+
+			$_POST['message'] = '';
+			header("Location: chat.php");
+			exit;
 
 
 		}
@@ -71,8 +80,11 @@ include("functions.php");
 
 
 	</div>
-</div>
 
-<script src="js/scroll.js"></script>
+
+</div>
+<script type="text/javascript">
+	initScroll();
+</script>
 </body>
 </html>

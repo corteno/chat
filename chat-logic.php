@@ -2,7 +2,7 @@
 include('db.php');
 include('functions.php');
 
-$query = "SELECT * FROM chat ORDER BY id ASC";
+$query = "SELECT * FROM (SELECT * FROM chat ORDER BY id DESC LIMIT 10) tmp ORDER BY tmp.id ASC";
 $messages = $conn->query($query);
 
 while ($row = $messages->fetch_array()) :
@@ -14,3 +14,7 @@ while ($row = $messages->fetch_array()) :
 		<span class="message-time"><?php echo formatDate($row['date']); ?></span>
 	</div>
 <?php endwhile; ?>
+<script type="text/javascript">
+	initScroll();
+</script>
+

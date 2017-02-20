@@ -12,7 +12,7 @@ session_start();
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="header">
+<div class="header-wrapper">
 	<p class="header-title">Office Chat</p>
 </div>
 <section class="login-wrapper">
