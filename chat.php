@@ -33,9 +33,20 @@ include("functions.php");
 			request.send();
 		}
 
-		setInterval(function(){
+
+		var sendMessage = () =>{
+			var messageInput = document.getElementById('message-input');
+			var message = document.getElementById('message-input').value;
+			var request = new XMLHttpRequest();
+
+			message.addEventListener()
+
+			console.log(message);
+		}
+
+		/*setInterval(function(){
 			ajax();
-		}, 1000);
+		}, 1000);*/
 	</script>
 
 </head>
@@ -51,14 +62,14 @@ include("functions.php");
 		<div id="chat-data">
 
 		</div>
-		<form class="input-form" method="post" action="">
-			<textarea id="message-input" type="text" name="message" placeholder="Enter message"></textarea>
-			<input class="submit-button" type="submit" name="submit" value="Send">
-		</form>
+		<div class="input-form"	>
+			<input id="message-input" type="text" name="message" placeholder="Enter message">
+			<input class="submit-button" type="submit" name="submit" value="Send" onclick="sendMessage();">
+		</div>
 
 		<?php
 
-		if(isset($_POST['submit']) && ($_POST['submit'] == "Send")){
+		/*if(isset($_POST['submit']) && ($_POST['submit'] == "Send")){
 
 			$displayname = $_SESSION['displayname'];
 			$message = $_POST['message'];
@@ -74,7 +85,7 @@ include("functions.php");
 			exit;
 
 
-		}
+		}*/
 
 		?>
 
@@ -85,6 +96,7 @@ include("functions.php");
 </div>
 <script type="text/javascript">
 	initScroll();
+
 </script>
 </body>
 </html>
