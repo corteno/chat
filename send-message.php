@@ -1,5 +1,7 @@
 <?php
-if(isset($_GET['submit']) && ($_GET['submit'] == "Send")){
+session_start();
+include("db.php");
+if(isset($_GET['message'])){
 
 	$displayname = $_SESSION['displayname'];
 	$message = $_GET['message'];

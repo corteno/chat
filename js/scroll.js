@@ -2,6 +2,7 @@ var firstScroll = true;
 
 var scrollUpdate = () => {
     var objDiv = document.getElementById("chat-data");
+    console.log(objDiv.scrollHeight);
     objDiv.scrollTop = objDiv.scrollHeight;
 }
 
@@ -10,7 +11,13 @@ var initScroll = () => {
         setTimeout(() => {
             scrollUpdate();
             firstScroll = false;
-        }, 80);
+        }, 100);
 
     }
 }
+
+var jumpToChatBottom = () => {
+    var bottom = document.getElementById("chat-bottom");
+
+    bottom.scrollIntoView();
+};

@@ -21,7 +21,8 @@ while ($row = $messages->fetch_array()) :
 		<span class="message-time"><?php echo formatDate($row['date']); ?></span>
 	</div>
 <?php endwhile; ?>
+<a href="" id="chat-bottom"></a>
 <script type="text/javascript">
-	initScroll();
+    jumpToChatBottom();
 </script>
 
