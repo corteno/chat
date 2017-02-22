@@ -3,7 +3,7 @@ session_start();
 include('db.php');
 include('functions.php');
 
-$query = "SELECT * FROM (SELECT * FROM chat ORDER BY id DESC LIMIT 10) tmp ORDER BY tmp.id ASC";
+$query = "SELECT * FROM (SELECT * FROM chat ORDER BY id DESC LIMIT 20) tmp ORDER BY tmp.id ASC";
 $messages = $conn->query($query);
 
 while ($row = $messages->fetch_array()) :

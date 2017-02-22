@@ -57,8 +57,65 @@ input:focus{
     align-items: center;
 }
 
-.login-wrapper input{
-    margin-bottom: 10px;
+
+.login-input-wrapper{
+    position: relative;
+    display: flex;
+    max-width: 300px;
+    width: 100%;
+    margin-bottom: 30px;
+
+}
+
+.login-input{
+    display: flex;
+    /*background: transparent;*/
+    border: none;
+    height: 40px;
+
+    width: 100%;
+    padding: 0 5px;
+    background: transparent;
+    border-bottom: 1px solid #009688;
+}
+
+.login-bar{
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 0;
+    height:2px;
+    background: #009688;
+
+    -webkit-transition:  ease-in-out 0.2s;
+    -moz-transition: ease-in-out 0.2s;
+    -ms-transition: ease-in-out 0.2s;
+    -o-transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.2s;
+}
+
+.login-input:focus ~ .login-bar,
+.login-active ~ .login-bar{
+    width: 100%;
+}
+
+.login-input:focus + .login-label,
+.login-active + .login-label{
+    top: -25px;
+}
+
+
+
+.login-label{
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    pointer-events: none;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s ;
+    -ms-transition: 0.2s ;
+    -o-transition: 0.2s ;
+    transition: 0.2s ;
 }
 
 #chat-box{

@@ -17,10 +17,19 @@ session_start();
 </div>
 <section class="login-wrapper">
 	<form method="post" action="login.php">
-		<input type="text" class="login-username" name="username" placeholder="Felhasználónév">
-		<input type="password" class="login-password" name="password" placeholder="Jelszó">
+        <div class="login-input-wrapper">
+            <input id="login-username" type="text" class="login-username login-input" name="username">
+            <label class="login-label">Felhasználónév</label>
+            <div class="login-bar"></div>
+        </div>
+		<div class="login-input-wrapper">
+            <input id="login-password" type="password" class="login-password login-input" name="password">
+            <label class="login-label">Jelszó</label>
+            <div class="login-bar"></div>
+        </div>
 		<input class="submit-button" type="submit" value="Bejelentkezés">
 	</form>
 </section>
+<script src="js/login.js"></script>
 </body>
 </html>
