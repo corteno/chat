@@ -15,20 +15,23 @@ session_start();
 <div class="header-wrapper">
 	<p class="header-title">Office Chat</p>
 </div>
-<section class="login-wrapper">
+<section id="input-wrapper">
 	<form method="post" action="login.php">
-        <div class="login-input-wrapper">
+        <div class="input-wrapper">
             <input id="login-username" type="text" class="login-username login-input" name="username">
-            <label class="login-label">Felhasználónév</label>
+            <label class="input-label">Felhasználónév</label>
             <div class="login-bar"></div>
         </div>
-		<div class="login-input-wrapper">
+		<div class="input-wrapper">
             <input id="login-password" type="password" class="login-password login-input" name="password">
-            <label class="login-label">Jelszó</label>
+            <label class="input-label">Jelszó</label>
             <div class="login-bar"></div>
         </div>
 		<input class="submit-button" type="submit" value="Bejelentkezés">
 	</form>
+    <div class="registration">
+        <a href="register.php">Regisztráció</a>
+    </div>
 </section>
 <script src="js/login.js"></script>
 </body>

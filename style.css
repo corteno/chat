@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+}
+
 body{
     background: #f1f1f1;
 }
@@ -19,20 +23,23 @@ input:focus{
     justify-content: center;
     align-items: center;
     height: 80px;
-}
 
-.chat-header{
     justify-content: flex-start;
     background: #009688;
     box-shadow: 0 2px 5px rgba(0,0,0,.26);
     color: #fff;
+
+    padding-left: 15px;
+}
+
+.chat-header{
+
 }
 
 .user{
     display: flex;
     align-self: flex-start;
     align-self: center;
-    padding-left: 20px;
 }
 
 .header-title{
@@ -41,15 +48,15 @@ input:focus{
     text-transform: uppercase;
 }
 
-.login-wrapper{
+#input-wrapper{
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    margin-top: 20px;
+    margin-top: 35px;
 }
 
-.login-wrapper form{
+#input-wrapper form{
     max-width: 500px;
     width: 100%;
     display: flex;
@@ -58,7 +65,7 @@ input:focus{
 }
 
 
-.login-input-wrapper{
+.input-wrapper{
     position: relative;
     display: flex;
     max-width: 300px;
@@ -99,14 +106,14 @@ input:focus{
     width: 100%;
 }
 
-.login-input:focus + .login-label,
-.login-active + .login-label{
+.login-input:focus + .input-label,
+.login-active + .input-label{
     top: -25px;
 }
 
 
 
-.login-label{
+.input-label{
     position: absolute;
     top: 10px;
     left: 5px;
@@ -117,6 +124,22 @@ input:focus{
     -o-transition: 0.2s ;
     transition: 0.2s ;
 }
+
+.registration{
+    margin-top: 20px;
+    color: #009688;
+}
+
+.registration a{
+    padding: 5px;
+    color: #009688;
+    font-family: NotoSansBold;
+}
+
+
+/*
+======== CHAT STYLE ==========
+*/
 
 #chat-box{
     display: flex;
@@ -206,6 +229,24 @@ input:focus{
     /*max-width: 200px;
     width: 100%;*/
 }
+
+/*======== CHAT STYLE END ==========*/
+
+/*======== REGISTER STYLE ==========*/
+
+.register-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*======== REGISTER STYLE END ==========*/
 
 
 /*
