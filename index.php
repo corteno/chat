@@ -18,12 +18,12 @@ session_start();
 <section id="input-wrapper">
 	<form method="post" action="login.php">
         <div class="input-wrapper">
-            <input id="login-username" type="text" class="login-username login-input" name="username">
+            <input id="login-username" type="text" class="login-input" name="username" autocomplete="off">
             <label class="input-label">Felhasználónév</label>
             <div class="login-bar"></div>
         </div>
 		<div class="input-wrapper">
-            <input id="login-password" type="password" class="login-password login-input" name="password">
+            <input id="login-password" type="password" class="login-input" name="password" autocomplete="off">
             <label class="input-label">Jelszó</label>
             <div class="login-bar"></div>
         </div>
@@ -33,6 +33,6 @@ session_start();
         <a href="register.php">Regisztráció</a>
     </div>
 </section>
-<script src="js/login.js"></script>
+<script src="js/input.js"></script>
 </body>
 </html>

@@ -15,39 +15,39 @@
 <section id="input-wrapper">
     <form class="register-form" action="">
         <div class="input-wrapper">
-            <input id="register-displayname" type="text" class="login-username login-input" name="username" required>
+            <input id="register-displayname" type="text" class="login-input" name="username" required autocomplete="off">
             <label class="input-label">Becenév</label>
             <div class="login-bar"></div>
         </div>
 
         <div class="input-wrapper">
-            <input id="register-username" type="text" class="login-username login-input" name="username" required>
+            <input id="register-username" type="text" class="login-input" name="username" required> autocomplete="off"
             <label class="input-label">Felhasználónév</label>
             <div class="login-bar"></div>
         </div>
 
         <div class="input-wrapper">
-            <input id="register-email" type="email" class="login-username login-input" name="username" required>
+            <input id="register-email" type="email" class="login-input" name="username" required autocomplete="off">
             <label class="input-label">E-mail</label>
             <div class="login-bar"></div>
         </div>
 
         <div class="input-wrapper">
-            <input id="register-password1" type="text" class="login-username login-input" name="username" required>
+            <input id="register-password1" type="password" class="login-input" name="username" required autocomplete="off">
             <label class="input-label">Jelszó</label>
             <div class="login-bar"></div>
         </div>
         <div class="input-wrapper">
-            <input id="register-password2" type="text" class="login-username login-input" name="username" required>
+            <input id="register-password2" type="password" class="login-input" name="username" required autocomplete="off">
             <label class="input-label">Jelszó újra</label>
             <div class="login-bar"></div>
         </div>
 
 
-        <input type="submit">
+        <input class="submit-button" type="submit">
     </form>
 </section>
 
-
+<script src="js/input.js"></script>
 </body>
 </html>

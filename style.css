@@ -70,7 +70,7 @@ input:focus{
     display: flex;
     max-width: 300px;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 
 }
 
@@ -84,6 +84,9 @@ input:focus{
     padding: 0 5px;
     background: transparent;
     border-bottom: 1px solid #009688;
+
+    font-size: 14px;
+    font-family: NotoSansBold;
 }
 
 .login-bar{
@@ -108,7 +111,8 @@ input:focus{
 
 .login-input:focus + .input-label,
 .login-active + .input-label{
-    top: -25px;
+    top: -20px;
+    color: #006156;
 }
 
 
@@ -123,6 +127,8 @@ input:focus{
     -ms-transition: 0.2s ;
     -o-transition: 0.2s ;
     transition: 0.2s ;
+
+    color: #009688;
 }
 
 .registration{
