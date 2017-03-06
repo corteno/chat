@@ -20,6 +20,7 @@ input:focus{
 
 .header-wrapper{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     height: 80px;
@@ -29,7 +30,7 @@ input:focus{
     box-shadow: 0 2px 5px rgba(0,0,0,.26);
     color: #fff;
 
-    padding-left: 15px;
+    padding: 0 15px;
 }
 
 .chat-header{
@@ -40,6 +41,17 @@ input:focus{
     display: flex;
     align-self: flex-start;
     align-self: center;
+}
+
+.logout-button{
+    display: flex;
+    margin-left: auto;
+}
+
+.logout-button img{
+
+    height: 30px;
+    width: 30px;
 }
 
 .header-title{
@@ -156,9 +168,7 @@ input:focus{
 #chat-data{
     display: flex;
     flex-direction: column;
-
-    /*min-height: 400px;*/
-    height: calc(100vh - 130px);
+    height: calc(100% - 130px);
     max-width: 500px;
     width: 100%;
     margin-top: 10px;
@@ -274,6 +284,16 @@ input:focus{
     background: #a6a6a6;
 }
 
+
+
+/* Change the white to any color ;) */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #f1f1f1 inset !important;
+}
+
+input:-webkit-autofill {
+    background-color: transparent !important;
+}
 
 /*
     FONTS

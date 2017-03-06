@@ -33,6 +33,13 @@ include("functions.php");
     <div class="user">
         <?php printf($_SESSION['displayname']); ?>
     </div>
+	
+	<div class="logout-button">
+		<a href="logout.php">
+			<img src="img/logout.svg" alt="">
+		</a>
+
+	</div>
 </div>
 
 <div id="container">

@@ -16,14 +16,14 @@ session_start();
 	<p class="header-title">Office Chat</p>
 </div>
 <section id="input-wrapper">
-	<form method="post" action="login.php">
+	<form method="post" action="login.php" autocomplete="off">
         <div class="input-wrapper">
-            <input id="login-username" type="text" class="login-input" name="username" autocomplete="off">
+            <input id="login-username" type="text" class="login-username login-input" name="username" >
             <label class="input-label">Felhasználónév</label>
             <div class="login-bar"></div>
         </div>
 		<div class="input-wrapper">
-            <input id="login-password" type="password" class="login-input" name="password" autocomplete="off">
+            <input id="login-password" type="password" class="login-password login-input" name="password">
             <label class="input-label">Jelszó</label>
             <div class="login-bar"></div>
         </div>
@@ -33,6 +33,6 @@ session_start();
         <a href="register.php">Regisztráció</a>
     </div>
 </section>
-<script src="js/input.js"></script>
+<script src="js/login.js"></script>
 </body>
 </html>
