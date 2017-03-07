@@ -21,7 +21,7 @@
         </div>
 
         <div class="input-wrapper">
-            <input id="register-username" type="text" class="login-input" name="username" required> autocomplete="off"
+            <input id="register-username" type="text" class="login-input" name="username" required autocomplete="off">
             <label class="input-label">Felhasználónév</label>
             <div class="login-bar"></div>
         </div>
